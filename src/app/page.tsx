@@ -242,12 +242,12 @@ const steps = [
 ];
 
 const insurers = [
-  "State Farm",
-  "Allstate",
-  "GEICO",
-  "Progressive",
-  "USAA",
-  "Travelers",
+  { name: "State Farm",  src: "/logos/state-farm.svg" },
+  { name: "Allstate",   src: "/logos/allstate.svg" },
+  { name: "GEICO",      src: "/logos/geico.svg" },
+  { name: "Progressive",src: "/logos/progressive.svg" },
+  { name: "USAA",       src: "/logos/usaa.svg" },
+  { name: "Travelers",  src: "/logos/travelers.svg" },
 ];
 
 /* ─────────────────────────────────────────────────
@@ -447,18 +447,20 @@ function TrustBar() {
       className="border-y"
       style={{ backgroundColor: "#ffffff", borderColor: "rgba(0,95,97,0.08)" }}
     >
-      <div className="max-w-7xl mx-auto px-6 py-5 flex flex-wrap items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-6 py-5 flex flex-wrap items-center justify-between gap-6">
         <p className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#888" }}>
           Accepted by major auto insurers
         </p>
-        <ul className="flex flex-wrap items-center gap-6 list-none">
-          {insurers.map((name) => (
-            <li
-              key={name}
-              className="text-sm font-semibold"
-              style={{ color: "#342E37", opacity: 0.6 }}
-            >
-              {name}
+        <ul className="flex flex-wrap items-center gap-8 list-none">
+          {insurers.map((insurer) => (
+            <li key={insurer.name} className="flex items-center justify-center">
+              <Image
+                src={insurer.src}
+                alt={`${insurer.name} Insurance`}
+                width={120}
+                height={56}
+                className="object-contain w-28 h-12 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+              />
             </li>
           ))}
         </ul>
