@@ -282,17 +282,23 @@ function Navbar() {
 
         {/* Nav Links */}
         <ul className="hidden md:flex items-center gap-8 list-none">
-          {["Services", "Conditions", "Why Us", "Location"].map((item) => (
-            <li key={item}>
+          {[
+            { label: "Services", href: "#services" },
+            { label: "Conditions", href: "#conditions" },
+            { label: "Why Us", href: "#why-us" },
+            { label: "Location", href: "#location" },
+            { label: "FAQ", href: "/faq" },
+          ].map((item) => (
+            <li key={item.label}>
               <a
-                href={`#${item.toLowerCase().replace(" ", "-")}`}
-                id={`nav-${item.toLowerCase().replace(" ", "-")}`}
+                href={item.href}
+                id={`nav-${item.label.toLowerCase().replace(" ", "-")}`}
                 className="text-sm font-medium transition-colors duration-200"
                 style={{ color: "#4a4a4a" }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#005F61")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "#4a4a4a")}
               >
-                {item}
+                {item.label}
               </a>
             </li>
           ))}
@@ -840,6 +846,7 @@ function Footer() {
               { label: "Conditions", href: "#conditions" },
               { label: "Why Choose Us", href: "#why-us" },
               { label: "Location & Hours", href: "#location" },
+              { label: "FAQ", href: "/faq" },
               { label: "Book Appointment", href: "#book" },
             ].map((link) => (
               <li key={link.label}>
