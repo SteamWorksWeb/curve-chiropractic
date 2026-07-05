@@ -459,7 +459,7 @@ function TrustBar() {
                 alt={`${insurer.name} Insurance`}
                 width={120}
                 height={56}
-                className="object-contain w-28 h-12 grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100"
+                className="object-contain w-28 h-12 transition-all duration-300 hover:scale-110"
               />
             </li>
           ))}
