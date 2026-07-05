@@ -72,8 +72,8 @@ const config: Config = {
         cream: "#F7F3EB",
       },
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["Bricolage Grotesque", "Georgia", "serif"],
+        sans: ["var(--font-inter)", "Inter", "system-ui", "sans-serif"],
+        display: ["var(--font-jakarta)", "Plus Jakarta Sans", "system-ui", "sans-serif"],
       },
       animation: {
         "fade-in-up": "fadeInUp 0.6s ease-out forwards",

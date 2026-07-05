@@ -343,7 +343,7 @@ function Hero() {
 
           <h1
             className="text-5xl md:text-6xl font-bold leading-tight"
-            style={{ fontFamily: "var(--font-bricolage, Georgia, serif)", color: "#1a1a1a" }}
+            style={{ fontFamily: "var(--font-jakarta, system-ui, sans-serif)", color: "#1a1a1a" }}
           >
             Get back to feeling{" "}
             <span
@@ -494,7 +494,7 @@ function Services() {
                 </div>
                 <h3
                   className="text-lg font-bold mb-2"
-                  style={{ fontFamily: "var(--font-bricolage, Georgia, serif)", color: "#1a1a1a" }}
+                  style={{ fontFamily: "var(--font-jakarta, system-ui, sans-serif)", color: "#1a1a1a" }}
                 >
                   {svc.title}
                 </h3>
@@ -518,7 +518,7 @@ function Services() {
               >
                 <ClipboardIcon className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2" style={{ fontFamily: "var(--font-bricolage, Georgia, serif)" }}>
+              <h3 className="text-xl font-bold text-white mb-2" style={{ fontFamily: "var(--font-jakarta, system-ui, sans-serif)" }}>
                 Not sure where to start?
               </h3>
               <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.8)" }}>
@@ -633,7 +633,7 @@ function Process() {
                 </div>
                 <h3
                   className="text-lg font-bold mb-2"
-                  style={{ fontFamily: "var(--font-bricolage, Georgia, serif)", color: "#1a1a1a" }}
+                  style={{ fontFamily: "var(--font-jakarta, system-ui, sans-serif)", color: "#1a1a1a" }}
                 >
                   {step.title}
                 </h3>
@@ -677,7 +677,7 @@ function Location() {
             </span>
             <h2
               className="text-3xl font-bold text-white mb-8"
-              style={{ fontFamily: "var(--font-bricolage, Georgia, serif)" }}
+              style={{ fontFamily: "var(--font-jakarta, system-ui, sans-serif)" }}
             >
               Curve Chiropractic
             </h2>
