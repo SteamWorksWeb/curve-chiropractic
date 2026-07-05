@@ -67,7 +67,7 @@ export default function SiteNavbar() {
             href="tel:+18139994147"
             id="nav-phone"
             className="hidden sm:flex items-center gap-1.5 text-sm font-medium"
-            style={{ color: "#005F61" }}
+            style={{ color: "#BA5A31" }}
           >
             <PhoneIcon className="w-4 h-4" />
             (813) 999-4147
