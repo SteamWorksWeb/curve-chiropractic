@@ -1,0 +1,155 @@
+"use client";
+
+import Image from "next/image";
+
+export default function SiteFooter() {
+  const year = new Date().getFullYear();
+
+  return (
+    <footer id="footer" style={{ backgroundColor: "#342E37" }}>
+      {/* Main footer grid */}
+      <div className="max-w-7xl mx-auto px-6 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+        {/* Brand column */}
+        <div className="lg:col-span-1">
+          <a href="/" id="footer-logo" className="block mb-4">
+            <Image
+              src="/logo.png"
+              alt="Curve Chiropractic"
+              width={140}
+              height={66}
+              className="object-contain"
+              style={{
+                height: "38px",
+                width: "auto",
+                filter: "brightness(0) invert(1)",
+                opacity: 0.85,
+              }}
+            />
+          </a>
+          <p className="text-sm leading-relaxed" style={{ color: "rgba(247,243,235,0.55)" }}>
+            Helping Tampa Bay patients recover from auto-injury accidents with personalized,
+            insurance-covered chiropractic care.
+          </p>
+        </div>
+
+        {/* Services links */}
+        <div>
+          <h3 className="text-xs font-bold tracking-widest uppercase mb-4" style={{ color: "rgba(247,243,235,0.4)" }}>
+            Services
+          </h3>
+          <ul className="space-y-2.5 list-none">
+            {["Spinal Adjustment", "Auto-Injury Rehab", "Massage Therapy", "Corrective Exercise", "Spinal Decompression"].map((s) => (
+              <li key={s}>
+                <a
+                  href={`/#services`}
+                  id={`footer-svc-${s.toLowerCase().replace(/[\s-]/g, "-")}`}
+                  className="text-sm transition-colors duration-150"
+                  style={{ color: "rgba(247,243,235,0.65)" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "#7EB2DD")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(247,243,235,0.65)")}
+                >
+                  {s}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Navigation links */}
+        <div>
+          <h3 className="text-xs font-bold tracking-widest uppercase mb-4" style={{ color: "rgba(247,243,235,0.4)" }}>
+            Navigation
+          </h3>
+          <ul className="space-y-2.5 list-none">
+            {[
+              { label: "Conditions", href: "/#conditions" },
+              { label: "Why Choose Us", href: "/#why-us" },
+              { label: "Location & Hours", href: "/#location" },
+              { label: "FAQ", href: "/faq" },
+              { label: "Book Appointment", href: "/#book" },
+            ].map((link) => (
+              <li key={link.label}>
+                <a
+                  href={link.href}
+                  id={`footer-nav-${link.label.toLowerCase().replace(/[\s&]/g, "-")}`}
+                  className="text-sm transition-colors duration-150"
+                  style={{ color: "rgba(247,243,235,0.65)" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "#7EB2DD")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(247,243,235,0.65)")}
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Contact + Legal */}
+        <div>
+          <h3 className="text-xs font-bold tracking-widest uppercase mb-4" style={{ color: "rgba(247,243,235,0.4)" }}>
+            Contact
+          </h3>
+          <address className="not-italic space-y-2 text-sm" style={{ color: "rgba(247,243,235,0.65)" }}>
+            <p>13108 Cortez Blvd, Suite 203</p>
+            <p>Tampa, FL 33526</p>
+            <a
+              href="tel:+18139994147"
+              id="footer-phone"
+              className="block mt-1 transition-colors duration-150"
+              style={{ color: "rgba(247,243,235,0.65)" }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#7EB2DD")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(247,243,235,0.65)")}
+            >
+              (813) 999-4147
+            </a>
+          </address>
+
+          {/* Legal links */}
+          <div className="mt-6 pt-6 border-t" style={{ borderColor: "rgba(247,243,235,0.1)" }}>
+            <h3 className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: "rgba(247,243,235,0.4)" }}>
+              Legal
+            </h3>
+            <ul className="space-y-2 list-none">
+              <li>
+                <a
+                  href="/privacy-policy"
+                  id="footer-privacy-policy"
+                  className="text-sm transition-colors duration-150"
+                  style={{ color: "rgba(247,243,235,0.65)" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "#7EB2DD")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(247,243,235,0.65)")}
+                >
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/terms-of-service"
+                  id="footer-terms-of-service"
+                  className="text-sm transition-colors duration-150"
+                  style={{ color: "rgba(247,243,235,0.65)" }}
+                  onMouseEnter={(e) => (e.currentTarget.style.color = "#7EB2DD")}
+                  onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(247,243,235,0.65)")}
+                >
+                  Terms of Service
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom bar — dynamic copyright */}
+      <div className="border-t" style={{ borderColor: "rgba(247,243,235,0.08)" }}>
+        <div className="max-w-7xl mx-auto px-6 py-5 flex flex-wrap items-center justify-between gap-3">
+          <p className="text-xs" style={{ color: "rgba(247,243,235,0.35)" }}>
+            © {year} Curve Chiropractic - Serving Tampa Bay. All rights reserved.
+          </p>
+          <p className="text-xs" style={{ color: "rgba(247,243,235,0.25)" }}>
+            Designed with care in Tampa Bay, FL
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
