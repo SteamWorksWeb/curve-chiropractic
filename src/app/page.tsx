@@ -537,7 +537,7 @@ function Conditions() {
     <section
       id="conditions"
       className="py-20 md:py-28"
-      style={{ backgroundColor: "#d4e9f7" }}
+      style={{ backgroundColor: "#F4F6F6" }}
     >
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-start">
         {/* Left */}
