@@ -45,6 +45,7 @@ export default function SiteNavbar() {
             { label: "Why Us", href: "/#why-us" },
             { label: "Location", href: "/#location" },
             { label: "FAQ", href: "/faq" },
+            { label: "Contact", href: "/contact" },
           ].map((item) => (
             <li key={item.label}>
               <a

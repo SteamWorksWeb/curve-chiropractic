@@ -66,6 +66,7 @@ export default function SiteFooter() {
               { label: "Why Choose Us", href: "/#why-us" },
               { label: "Location & Hours", href: "/#location" },
               { label: "FAQ", href: "/faq" },
+              { label: "Contact", href: "/contact" },
               { label: "Book Appointment", href: "/#book" },
             ].map((link) => (
               <li key={link.label}>

@@ -288,6 +288,7 @@ function Navbar() {
             { label: "Why Us", href: "#why-us" },
             { label: "Location", href: "#location" },
             { label: "FAQ", href: "/faq" },
+            { label: "Contact", href: "/contact" },
           ].map((item) => (
             <li key={item.label}>
               <a
@@ -859,6 +860,7 @@ function Footer() {
               { label: "Why Choose Us", href: "#why-us" },
               { label: "Location & Hours", href: "#location" },
               { label: "FAQ", href: "/faq" },
+              { label: "Contact", href: "/contact" },
               { label: "Book Appointment", href: "#book" },
             ].map((link) => (
               <li key={link.label}>
