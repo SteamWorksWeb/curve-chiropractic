@@ -406,8 +406,8 @@ function Hero() {
           />
           <div className="relative rounded-3xl overflow-hidden shadow-2xl" style={{ zIndex: 1 }}>
             <Image
-              src="/chiro-hero.jpg"
-              alt="Chiropractor performing spinal adjustment on patient at Curve Chiropractic Tampa Bay"
+              src="/justin1.jpg"
+              alt="Dr. Justin explaining spinal anatomy to a patient at Curve Chiropractic Tampa Bay"
               width={640}
               height={560}
               className="w-full object-cover"
