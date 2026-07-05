@@ -257,22 +257,27 @@ function Navbar() {
   return (
     <header
       id="navbar"
-      className="sticky top-0 z-50 bg-cream/95 backdrop-blur-md border-b border-teal-50"
-      style={{ backgroundColor: "rgba(247, 243, 235, 0.95)" }}
+      className="sticky top-0 z-50 backdrop-blur-md border-b"
+      style={{
+        backgroundColor: "rgba(247, 243, 235, 0.97)",
+        borderColor: "rgba(0, 95, 97, 0.08)",
+      }}
     >
-      <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <nav
+        className="max-w-7xl mx-auto px-6 flex items-center justify-between"
+        style={{ paddingTop: "18px", paddingBottom: "18px" }}
+      >
         {/* Logo */}
-        <a href="#hero" id="nav-logo" className="flex items-center gap-2.5 group" aria-label="Curve Chiropractic home">
-          <CurveLogoMark size={36} />
-          <span
-            className="font-display font-700 text-lg leading-tight"
-            style={{ color: "#005F61", fontFamily: "var(--font-bricolage, Georgia, serif)", fontWeight: 700 }}
-          >
-            Curve<br />
-            <span style={{ fontSize: "0.7rem", letterSpacing: "0.08em", fontWeight: 600, opacity: 0.8 }}>
-              CHIROPRACTIC
-            </span>
-          </span>
+        <a href="#hero" id="nav-logo" aria-label="Curve Chiropractic home">
+          <Image
+            src="/logo.png"
+            alt="Curve Chiropractic"
+            width={160}
+            height={75}
+            className="object-contain"
+            style={{ height: "44px", width: "auto" }}
+            priority
+          />
         </a>
 
         {/* Nav Links */}
@@ -312,6 +317,7 @@ function Navbar() {
     </header>
   );
 }
+
 
 /* ─────────────────────────────────────────────────
    Hero
@@ -780,17 +786,20 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Brand column */}
         <div className="lg:col-span-1">
-          <a href="#hero" id="footer-logo" className="flex items-center gap-2.5 mb-4">
-            <CurveLogoMark size={34} />
-            <span
-              className="font-bold text-sm leading-tight"
-              style={{ color: "#F7F3EB", fontFamily: "var(--font-bricolage, Georgia, serif)" }}
-            >
-              Curve<br />
-              <span style={{ fontSize: "0.65rem", letterSpacing: "0.1em", fontWeight: 600, opacity: 0.7 }}>
-                CHIROPRACTIC
-              </span>
-            </span>
+          <a href="#hero" id="footer-logo" className="block mb-4">
+            <Image
+              src="/logo.png"
+              alt="Curve Chiropractic"
+              width={140}
+              height={66}
+              className="object-contain"
+              style={{
+                height: "38px",
+                width: "auto",
+                filter: "brightness(0) invert(1)",
+                opacity: 0.85,
+              }}
+            />
           </a>
           <p className="text-sm leading-relaxed" style={{ color: "rgba(247,243,235,0.55)" }}>
             Helping Tampa Bay patients recover from auto-injury accidents with personalized,
