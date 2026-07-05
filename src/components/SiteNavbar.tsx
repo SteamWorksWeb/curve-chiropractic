@@ -75,7 +75,7 @@ export default function SiteNavbar() {
           <a
             href="/#book"
             id="nav-book-cta"
-            className="btn-cta text-sm px-5 py-2.5"
+            className="btn-cta-teal text-sm px-5 py-2.5"
           >
             Book Online
           </a>

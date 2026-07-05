@@ -315,7 +315,7 @@ function Navbar() {
             <PhoneIcon className="w-4 h-4" />
             (813) 999-4147
           </a>
-          <a href="#book" id="nav-book-cta" className="btn-cta text-sm px-5 py-2.5">
+          <a href="#book" id="nav-book-cta" className="btn-cta-teal text-sm px-5 py-2.5">
             Book Online
           </a>
         </div>

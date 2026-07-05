@@ -80,6 +80,41 @@ body {
 }
 
 /* ─────────────────────────────────────────
+   Teal solid button (navbar only)
+   ───────────────────────────────────────── */
+.btn-cta-teal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #005F61;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  letter-spacing: 0.01em;
+  padding: 0.75rem 1.875rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-cta-teal:hover {
+  background-color: #004748;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 95, 97, 0.35);
+}
+
+.btn-cta-teal:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+
+/* ─────────────────────────────────────────
    Teal ghost / outline button
    ───────────────────────────────────────── */
 .btn-teal-outline {
