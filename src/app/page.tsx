@@ -464,6 +464,12 @@ function TrustBar() {
             </li>
           ))}
         </ul>
+        <span
+          className="text-xs font-semibold tracking-wide px-3 py-1.5 rounded-full border whitespace-nowrap"
+          style={{ color: "#005F61", borderColor: "rgba(0,95,97,0.25)", backgroundColor: "rgba(0,95,97,0.05)" }}
+        >
+          + many more
+        </span>
       </div>
     </section>
   );
