@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* ── Brand Palette ── */
+  --color-teal:             #005F61;
+  --color-teal-light:       #007a7d;
+  --color-teal-dark:        #003f40;
+  --color-teal-50:          #e6f4f4;
+  --color-teal-100:         #b3dfe0;
+  --color-teal-200:         #80cacc;
+
+  --color-light-blue:       #7EB2DD;
+  --color-light-blue-light: #a4c9e8;
+  --color-light-blue-dark:  #5a96c8;
+  --color-light-blue-50:    #f0f7fd;
+  --color-light-blue-100:   #d4e9f7;
+
+  /* Orange: STRICTLY reserved for booking CTA buttons only */
+  --color-orange:           #BA5A31;
+  --color-orange-light:     #d4703f;
+  --color-orange-dark:      #9a4520;
+
+  --color-charcoal:         #342E37;
+  --color-charcoal-light:   #4a4250;
+  --color-charcoal-dark:    #201c24;
+
+  --color-cream:            #F7F3EB;
+  --color-background:       #F7F3EB;
+  --color-foreground:       #1a1a1a;
+
+  /* ── Typography ── */
+  --font-sans:    "Inter", system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque", Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─────────────────────────────────────────
+   CTA: ORANGE — only for booking buttons
+   ───────────────────────────────────────── */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #BA5A31;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  letter-spacing: 0.01em;
+  padding: 0.75rem 1.875rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-cta:hover {
+  background-color: #9a4520;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(186, 90, 49, 0.4);
+}
+
+.btn-cta:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ─────────────────────────────────────────
+   Teal ghost / outline button
+   ───────────────────────────────────────── */
+.btn-teal-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: transparent;
+  color: #005F61;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 9999px;
+  border: 2px solid #005F61;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-teal-outline:hover {
+  background-color: #005F61;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* ─────────────────────────────────────────
+   Section helpers
+   ───────────────────────────────────────── */
+.section-label {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #005F61;
+  margin-bottom: 0.5rem;
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.875rem, 4vw, 2.875rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #1a1a1a;
+}
+
+.section-heading-white {
+  font-family: var(--font-display);
+  font-size: clamp(1.875rem, 4vw, 2.875rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
+}
+
+/* ─────────────────────────────────────────
+   Service cards
+   ───────────────────────────────────────── */
+.service-card {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  padding: 1.75rem;
+  border: 1px solid rgba(0, 95, 97, 0.1);
+  transition: box-shadow 0.25s ease, transform 0.25s ease, border-color 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background-color: #005F61;
+  border-radius: 0 0 4px 4px;
+  transition: height 0.25s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 12px 40px rgba(0, 95, 97, 0.13);
+  transform: translateY(-4px);
+  border-color: rgba(0, 95, 97, 0.2);
+}
+
+.service-card:hover::before {
+  height: 100%;
+}
+
+/* ─────────────────────────────────────────
+   Scrollbar
+   ───────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #F7F3EB; }
+::-webkit-scrollbar-thumb { background: #005F61; border-radius: 3px; }
