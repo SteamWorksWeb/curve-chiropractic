@@ -549,7 +549,7 @@ function Conditions() {
     <section
       id="conditions"
       className="py-20 md:py-28"
-      style={{ backgroundColor: "#F4F6F6" }}
+      style={{ backgroundColor: "#ffffff" }}
     >
       <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-start">
         {/* Left */}
@@ -572,7 +572,7 @@ function Conditions() {
             {conditions.map((condition) => (
               <li
                 key={condition}
-                className="flex items-start gap-2.5 px-4 py-3.5 rounded-xl bg-white"
+                className="flex items-start gap-2.5 px-4 py-3.5 rounded-xl bg-[#F4F6F6]"
                 style={{ boxShadow: "0 1px 4px rgba(0,95,97,0.07)" }}
               >
                 <CheckIcon
