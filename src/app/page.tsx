@@ -444,37 +444,40 @@ function TrustBar() {
   return (
     <section
       id="trust-bar"
-      className="border-y"
+      className="border-y overflow-x-auto"
       style={{ backgroundColor: "#ffffff", borderColor: "rgba(0,95,97,0.08)" }}
     >
-      <div className="max-w-7xl mx-auto px-6 py-5 flex flex-wrap items-center justify-between gap-6">
-        <p className="text-xs font-semibold tracking-widest uppercase" style={{ color: "#888" }}>
-          Accepted by major auto insurers
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
+        <p className="text-xs font-semibold tracking-widest uppercase whitespace-nowrap flex-shrink-0" style={{ color: "#888" }}>
+          Accepted By Most Insurers
         </p>
-        <ul className="flex flex-wrap items-center gap-8 list-none">
+        <ul className="flex items-center gap-5 list-none flex-shrink-0">
           {insurers.map((insurer) => (
             <li key={insurer.name} className="flex items-center justify-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={insurer.src}
                 alt={`${insurer.name} Insurance`}
-                width={120}
-                height={56}
-                className="object-contain w-28 h-12 transition-all duration-300 hover:scale-110"
+                width={90}
+                height={40}
+                className="object-contain w-20 h-9 transition-all duration-300 hover:scale-110"
               />
             </li>
           ))}
+          <li>
+            <span
+              className="text-xs font-semibold tracking-wide px-3 py-1.5 rounded-full border whitespace-nowrap"
+              style={{ color: "#005F61", borderColor: "rgba(0,95,97,0.25)", backgroundColor: "rgba(0,95,97,0.05)" }}
+            >
+              + many more
+            </span>
+          </li>
         </ul>
-        <span
-          className="text-xs font-semibold tracking-wide px-3 py-1.5 rounded-full border whitespace-nowrap"
-          style={{ color: "#005F61", borderColor: "rgba(0,95,97,0.25)", backgroundColor: "rgba(0,95,97,0.05)" }}
-        >
-          + many more
-        </span>
       </div>
     </section>
   );
 }
+
 
 /* ─────────────────────────────────────────────────
    Services
