@@ -242,12 +242,12 @@ const steps = [
 ];
 
 const insurers = [
-  { name: "State Farm",  src: "https://logo.clearbit.com/statefarm.com" },
-  { name: "Allstate",   src: "https://logo.clearbit.com/allstate.com" },
-  { name: "GEICO",      src: "https://logo.clearbit.com/geico.com" },
-  { name: "Progressive",src: "https://logo.clearbit.com/progressive.com" },
-  { name: "USAA",       src: "https://logo.clearbit.com/usaa.com" },
-  { name: "Travelers",  src: "https://logo.clearbit.com/travelers.com" },
+  { name: "State Farm",  src: "/logos/state-farm.svg" },
+  { name: "Allstate",   src: "/logos/allstate.svg" },
+  { name: "GEICO",      src: "/logos/geico.svg" },
+  { name: "Progressive",src: "/logos/progressive.svg" },
+  { name: "USAA",       src: "/logos/usaa.svg" },
+  { name: "Travelers",  src: "/logos/travelers.svg" },
 ];
 
 /* ─────────────────────────────────────────────────
@@ -454,7 +454,8 @@ function TrustBar() {
         <ul className="flex flex-wrap items-center gap-8 list-none">
           {insurers.map((insurer) => (
             <li key={insurer.name} className="flex items-center justify-center">
-              <Image
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
                 src={insurer.src}
                 alt={`${insurer.name} Insurance`}
                 width={120}
