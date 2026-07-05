@@ -81,7 +81,7 @@ function FAQItem({
       id={faq.id}
       className="rounded-2xl overflow-hidden border transition-all duration-200"
       style={{
-        backgroundColor: isOpen ? "#EEF5F5" : "#ffffff",
+        backgroundColor: isOpen ? "#EEF5F5" : "#F7F3EB",
         borderColor: isOpen ? "rgba(0,95,97,0.2)" : "rgba(0,0,0,0.07)",
         boxShadow: isOpen
           ? "0 4px 20px rgba(0,95,97,0.08)"
@@ -180,7 +180,7 @@ export default function FAQPage() {
       {/* ── Accordion Section ── */}
       <section
         className="py-20 md:py-28"
-        style={{ backgroundColor: "#F7F3EB" }}
+        style={{ backgroundColor: "#ffffff" }}
       >
         <div className="max-w-3xl mx-auto px-6">
           {/* Section label */}
