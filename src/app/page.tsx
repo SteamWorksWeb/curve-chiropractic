@@ -301,13 +301,13 @@ function Hero() {
               Book Your Appointment
             </a>
             <a
-              href="tel:+18139994147"
+              href="tel:+18138323164"
               id="hero-call-cta"
               className="flex items-center gap-2 text-sm font-semibold"
               style={{ color: "#005F61" }}
             >
               <PhoneIcon className="w-4 h-4" />
-              (813) 999-4147
+              (813) 832-3164
             </a>
           </div>
 
@@ -663,11 +663,11 @@ function Location() {
                 <div>
                   <p className="text-sm font-semibold text-white">Phone</p>
                   <a
-                    href="tel:+18139994147"
+                    href="tel:+18138323164"
                     className="text-sm mt-0.5"
                     style={{ color: "rgba(255,255,255,0.75)" }}
                   >
-                    (813) 999-4147
+                    (813) 832-3164
                   </a>
                 </div>
               </div>
@@ -716,7 +716,7 @@ function CTABanner() {
           Start your appointment today and let's get you moving again.
           Most insurance accepted. No-obligation first evaluation.
         </p>
-        <a href="tel:+18139994147" id="banner-book-cta" className="btn-cta text-base px-10 py-4">
+        <a href="tel:+18138323164" id="banner-book-cta" className="btn-cta text-base px-10 py-4">
           Start Today →
         </a>
       </div>
@@ -817,17 +817,17 @@ function Footer() {
             Contact
           </h3>
           <address className="not-italic space-y-2 text-sm" style={{ color: "rgba(247,243,235,0.65)" }}>
-            <p>13108 Cortez Blvd, Suite 203</p>
-            <p>Tampa, FL 33526</p>
+            <p>3408 S Manhattan Ave, Ste 1</p>
+            <p>Tampa, FL 33629</p>
             <a
-              href="tel:+18139994147"
+              href="tel:+18138323164"
               id="footer-phone"
               className="block mt-1 transition-colors duration-150"
               style={{ color: "rgba(247,243,235,0.65)" }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "#7EB2DD")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(247,243,235,0.65)")}
             >
-              (813) 999-4147
+              (813) 832-3164
             </a>
           </address>
 

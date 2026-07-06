@@ -68,8 +68,8 @@ const NAV_LINKS = [
   { label: "Contact",     href: "/contact" },
 ];
 
-const PHONE_DISPLAY = "(813) 999-4147";
-const PHONE_HREF    = "tel:+18139994147";
+const PHONE_DISPLAY = "(813) 832-3164";
+const PHONE_HREF    = "tel:+18138323164";
 const BOOK_HREF     = "/#book";
 
 /* ─── Component ────────────────────────────────────────────────────────────── */

@@ -97,14 +97,14 @@ export default function SiteFooter() {
             <p>3408 S Manhattan Ave, Ste 1</p>
             <p>Tampa, FL 33629</p>
             <a
-              href="tel:+18139994147"
+              href="tel:+18138323164"
               id="footer-phone"
               className="block mt-1 transition-colors duration-150"
               style={{ color: "rgba(247,243,235,0.65)" }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "#7EB2DD")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(247,243,235,0.65)")}
             >
-              (813) 999-4147
+              (813) 832-3164
             </a>
           </address>
 
