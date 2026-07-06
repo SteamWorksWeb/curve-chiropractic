@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import SiteNavbar from "@/components/SiteNavbar";
 import SiteFooter from "@/components/SiteFooter";
@@ -9,45 +10,45 @@ import CTABanner from "@/components/CTABanner";
 const conditions = [
   {
     id: "sciatica-lower-back",
-    icon: "🦴",
     title: "Sciatica & Lower Back Pain",
     description:
       "Sharp, shooting pain down your leg or a constant dull ache in your lower back. Structural misalignment compresses the sciatic nerve — we correct the root cause, not just the symptom.",
+    image: "/svc-structural-v2.jpg",
   },
   {
     id: "neck-pain-whiplash",
-    icon: "🔄",
     title: "Neck Pain & Whiplash",
     description:
       "Stiffness, limited mobility, or pain resulting from auto accidents and daily strain. Whiplash injuries are complex and require precise structural correction to heal properly.",
+    image: "/svc-auto-v2.jpg",
   },
   {
     id: "migraines-headaches",
-    icon: "⚡",
     title: "Migraines & Headaches",
     description:
       "Chronic tension headaches and migraines often caused by upper cervical misalignment. Even a 1mm shift in the atlas can trigger debilitating, recurring head pain.",
+    image: "/svc-cervical-v2.jpg",
   },
   {
     id: "herniated-discs",
-    icon: "💢",
     title: "Herniated & Bulging Discs",
     description:
       "Nerve compression causing radiating pain, numbness, and severe discomfort. We use gentle spinal decompression and structural correction to relieve disc pressure without surgery.",
+    image: "/chiro-hero.jpg",
   },
   {
     id: "numbness-tingling",
-    icon: "🤚",
     title: "Numbness & Tingling",
     description:
       "Loss of sensation in the hands or feet, signaling interference in your nervous system. Identifying and correcting spinal subluxations restores full nerve communication.",
+    image: "/chiro-office.jpg",
   },
   {
     id: "tech-neck-posture",
-    icon: "📱",
     title: "Tech Neck & Posture",
     description:
       "Pain stemming from poor ergonomics, forward head posture, and prolonged screen time. For every inch your head drifts forward, your spine bears an extra 10 pounds of force.",
+    image: "/svc-prenatal-v2.jpg",
   },
 ];
 
@@ -60,7 +61,7 @@ function ConditionCard({
   return (
     <article
       id={condition.id}
-      className="group relative flex flex-col rounded-2xl border p-8 transition-all duration-300"
+      className="group flex flex-col rounded-2xl overflow-hidden border transition-all duration-300"
       style={{
         backgroundColor: "#ffffff",
         borderColor: "rgba(0,95,97,0.1)",
@@ -79,62 +80,69 @@ function ConditionCard({
         el.style.borderColor = "rgba(0,95,97,0.1)";
       }}
     >
-      {/* Top accent bar */}
-      <div
-        className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        style={{ backgroundColor: "#005F61" }}
-      />
-
-      {/* Icon badge */}
-      <div
-        className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-5 flex-shrink-0"
-        style={{ backgroundColor: "rgba(0,95,97,0.07)" }}
-      >
-        {condition.icon}
+      {/* ── Top: Image ── */}
+      <div className="relative h-48 w-full overflow-hidden flex-shrink-0">
+        <Image
+          src={condition.image}
+          alt={`${condition.title} — Curve Chiropractic Tampa Bay`}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+        {/* Teal gradient overlay at bottom of image */}
+        <div
+          className="absolute inset-x-0 bottom-0 h-16"
+          style={{
+            background:
+              "linear-gradient(to top, rgba(0,95,97,0.25), transparent)",
+          }}
+        />
       </div>
 
-      {/* Title */}
-      <h2
-        className="text-xl font-bold mb-3 leading-snug"
-        style={{
-          fontFamily: "var(--font-jakarta, system-ui, sans-serif)",
-          color: "#1a1a1a",
-        }}
-      >
-        {condition.title}
-      </h2>
-
-      {/* Description */}
-      <p className="text-sm leading-relaxed flex-1" style={{ color: "#555" }}>
-        {condition.description}
-      </p>
-
-      {/* Learn more link */}
-      <Link
-        href="/contact"
-        id={`condition-cta-${condition.id}`}
-        className="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold transition-colors duration-150"
-        style={{ color: "#005F61" }}
-        onMouseEnter={(e) =>
-          (e.currentTarget.style.color = "#BA5A31")
-        }
-        onMouseLeave={(e) =>
-          (e.currentTarget.style.color = "#005F61")
-        }
-      >
-        Get relief today
-        <svg
-          className="w-3.5 h-3.5"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+      {/* ── Bottom: Copy ── */}
+      <div className="flex flex-col flex-1 p-6">
+        {/* Title */}
+        <h2
+          className="text-lg font-bold mb-2 leading-snug"
+          style={{
+            fontFamily: "var(--font-jakarta, system-ui, sans-serif)",
+            color: "#005F61",
+          }}
         >
-          <path d="M5 12h14M12 5l7 7-7 7" />
-        </svg>
-      </Link>
+          {condition.title}
+        </h2>
+
+        {/* Description */}
+        <p
+          className="text-sm leading-relaxed flex-1"
+          style={{ color: "#444" }}
+        >
+          {condition.description}
+        </p>
+
+        {/* CTA */}
+        <Link
+          href="/contact"
+          id={`condition-cta-${condition.id}`}
+          className="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold transition-colors duration-150"
+          style={{ color: "#005F61" }}
+          onMouseEnter={(e) => (e.currentTarget.style.color = "#BA5A31")}
+          onMouseLeave={(e) => (e.currentTarget.style.color = "#005F61")}
+        >
+          Get relief today
+          <svg
+            className="w-3.5 h-3.5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </Link>
+      </div>
     </article>
   );
 }
@@ -215,12 +223,9 @@ export default function ConditionsPage() {
             ))}
           </div>
 
-          {/* Bottom trust strip */}
+          {/* Bottom trust CTA */}
           <div className="mt-16 text-center">
-            <p
-              className="text-sm mb-6"
-              style={{ color: "#888" }}
-            >
+            <p className="text-sm mb-6" style={{ color: "#888" }}>
               Not sure if chiropractic care is right for your condition?
             </p>
             <Link
