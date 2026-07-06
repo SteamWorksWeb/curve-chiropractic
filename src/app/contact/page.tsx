@@ -53,8 +53,8 @@ const contactDetails = [
   {
     icon: MapPinIcon,
     label: "Location",
-    value: "13108 Cortez Blvd, Suite 203",
-    sub: "Tampa, FL 33526",
+    value: "3408 S Manhattan Ave, Ste 1",
+    sub: "Tampa, FL 33629",
   },
   {
     icon: ClockIcon,
@@ -151,7 +151,7 @@ export default function ContactPage() {
             <div className="rounded-2xl overflow-hidden shadow-lg border" style={{ borderColor: "rgba(0,0,0,0.07)" }}>
               <iframe
                 title="Curve Chiropractic Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3522.7!2d-82.5717!3d28.3113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c6f1b1f1b1f1%3A0x1!2s13108+Cortez+Blvd%2C+Brooksville%2C+FL+34613!5e0!3m2!1sen!2sus!4v1"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3523.630097728445!2d-82.52026212398464!3d27.912654316049283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c338f165f101%3A0x2285a4b1994067d6!2sCurve%20Chiropractic!5e0!3m2!1sen!2sus!4v1783379644026!5m2!1sen!2sus"
                 width="100%"
                 height="280"
                 style={{ border: 0, display: "block" }}

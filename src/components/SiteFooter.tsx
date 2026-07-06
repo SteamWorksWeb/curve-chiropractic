@@ -94,8 +94,8 @@ export default function SiteFooter() {
             Contact
           </h3>
           <address className="not-italic space-y-2 text-sm" style={{ color: "rgba(247,243,235,0.65)" }}>
-            <p>13108 Cortez Blvd, Suite 203</p>
-            <p>Tampa, FL 33526</p>
+            <p>3408 S Manhattan Ave, Ste 1</p>
+            <p>Tampa, FL 33629</p>
             <a
               href="tel:+18139994147"
               id="footer-phone"

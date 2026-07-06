@@ -603,13 +603,17 @@ function Location() {
     <section id="location" className="py-20 md:py-28" style={{ backgroundColor: "#F7F3EB" }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="rounded-3xl overflow-hidden shadow-xl grid md:grid-cols-2" style={{ minHeight: 380 }}>
-          {/* Photo */}
+          {/* Google Map embed */}
           <div className="relative min-h-64 md:min-h-full">
-            <Image
-              src="/chiro-office.jpg"
-              alt="Curve Chiropractic office interior in Tampa Bay, Florida — serene treatment room with ocean view"
-              fill
-              className="object-cover"
+            <iframe
+              title="Curve Chiropractic Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3523.630097728445!2d-82.52026212398464!3d27.912654316049283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88c2c338f165f101%3A0x2285a4b1994067d6!2sCurve%20Chiropractic!5e0!3m2!1sen!2sus!4v1783379644026!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style={{ border: 0, display: "block", minHeight: "320px" }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
 
@@ -635,8 +639,8 @@ function Location() {
                 <div>
                   <p className="text-sm font-semibold text-white">Location</p>
                   <p className="text-sm mt-0.5" style={{ color: "rgba(255,255,255,0.75)" }}>
-                    13108 Cortez Blvd, Suite 203<br />
-                    Tampa, FL 33526
+                    3408 S Manhattan Ave, Ste 1<br />
+                    Tampa, FL 33629
                   </p>
                 </div>
               </div>
