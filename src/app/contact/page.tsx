@@ -3,6 +3,7 @@
 import { useState } from "react";
 import SiteNavbar from "@/components/SiteNavbar";
 import SiteFooter from "@/components/SiteFooter";
+import CTABanner from "@/components/CTABanner";
 
 /* ─── Icons ─────────────────────────────────────── */
 function PhoneIcon({ className, style }: { className?: string; style?: React.CSSProperties }) {
@@ -292,6 +293,7 @@ export default function ContactPage() {
         </div>
       </section>
 
+      <CTABanner />
       <SiteFooter />
     </main>
   );

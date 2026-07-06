@@ -60,7 +60,7 @@ function CloseIcon({ className = "" }: { className?: string }) {
 
 const NAV_LINKS = [
   { label: "Home",        href: "/" },
-  { label: "Services",    href: "/#services" },
+  { label: "Services",    href: "/services" },
   { label: "Conditions",  href: "/#conditions" },
   { label: "Why Us",      href: "/#why-us" },
   { label: "Location",    href: "/#location" },
@@ -246,7 +246,7 @@ export default function SiteNavbar() {
               {/* Drawer nav links */}
               <nav className="flex-1 overflow-y-auto px-6 py-8">
                 <ul className="space-y-1 list-none">
-                  {NAV_LINKS.map((item, idx) => (
+                  {NAV_LINKS.map((item) => (
                     <li key={item.label}>
                       <Link
                         href={item.href}
@@ -263,12 +263,6 @@ export default function SiteNavbar() {
                           e.currentTarget.style.backgroundColor = "transparent";
                         }}
                       >
-                        <span
-                          className="text-xs font-bold tabular-nums w-5"
-                          style={{ color: "rgba(0,95,97,0.4)" }}
-                        >
-                          {String(idx + 1).padStart(2, "0")}
-                        </span>
                         {item.label}
                       </Link>
                     </li>

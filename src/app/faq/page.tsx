@@ -4,6 +4,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SiteNavbar from "@/components/SiteNavbar";
 import SiteFooter from "@/components/SiteFooter";
+import CTABanner from "@/components/CTABanner";
 
 /* ─────────────────────────────────────────────────
    FAQ Content
@@ -205,44 +206,7 @@ export default function FAQPage() {
         </div>
       </section>
 
-      {/* ── CTA Banner ── */}
-      <section
-        className="relative overflow-hidden py-20 md:py-28"
-        style={{ backgroundColor: "#342E37" }}
-      >
-        {/* Decorative */}
-        <div
-          className="absolute -top-16 -right-16 w-64 h-64 rounded-full opacity-5 pointer-events-none"
-          style={{ backgroundColor: "#7EB2DD" }}
-        />
-        <div
-          className="absolute -bottom-12 -left-12 w-48 h-48 rounded-full opacity-5 pointer-events-none"
-          style={{ backgroundColor: "#7EB2DD" }}
-        />
-
-        <div className="relative max-w-2xl mx-auto px-6 text-center">
-          <h2
-            className="text-3xl md:text-4xl font-bold text-white mb-5 leading-tight"
-            style={{ fontFamily: "var(--font-jakarta, system-ui, sans-serif)" }}
-          >
-            Still have questions? Let&apos;s talk.
-          </h2>
-          <p
-            className="text-base mb-10 leading-relaxed"
-            style={{ color: "rgba(247,243,235,0.7)" }}
-          >
-            Your first consultation is free. Our team will walk you through exactly
-            what to expect and build a recovery plan tailored to you.
-          </p>
-          <a
-            href="/#book"
-            id="faq-book-cta"
-            className="btn-cta text-base px-10 py-4 inline-block"
-          >
-            Book Your Appointment
-          </a>
-        </div>
-      </section>
+      <CTABanner />
 
       <SiteFooter />
     </main>
