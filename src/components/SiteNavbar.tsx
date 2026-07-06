@@ -61,7 +61,7 @@ function CloseIcon({ className = "" }: { className?: string }) {
 const NAV_LINKS = [
   { label: "Home",        href: "/" },
   { label: "Services",    href: "/services" },
-  { label: "Conditions",  href: "/#conditions" },
+  { label: "Conditions",  href: "/conditions" },
   { label: "Why Us",      href: "/#why-us" },
   { label: "Location",    href: "/#location" },
   { label: "FAQ",         href: "/faq" },
