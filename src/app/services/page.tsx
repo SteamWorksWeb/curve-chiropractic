@@ -1,4 +1,4 @@
-import Image from "next/image";
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import SiteNavbar from "@/components/SiteNavbar";
 import SiteFooter from "@/components/SiteFooter";
@@ -16,7 +16,7 @@ const services = [
       "No twisting, cracking, or popping",
       "Immediate neurological relief for most patients",
     ],
-    image: "/svc-cervical-v2.jpg",
+    image: "/svc-cervical-v2.jpg?v=3",
     imageAlt:
       "Chiropractor performing upper cervical adjustment on a patient at Curve Chiropractic Tampa Bay",
   },
@@ -30,7 +30,7 @@ const services = [
       "Customized mirror-image traction",
       "Progressive curve restoration protocol",
     ],
-    image: "/svc-structural-v2.jpg",
+    image: "/svc-structural-v2.jpg?v=3",
     imageAlt:
       "Chiropractor analyzing spinal X-rays in a modern clinic at Curve Chiropractic",
   },
@@ -44,7 +44,7 @@ const services = [
       "Whiplash & soft-tissue rehab",
       "All major auto insurers accepted",
     ],
-    image: "/svc-auto-v2.jpg",
+    image: "/svc-auto-v2.jpg?v=3",
     imageAlt:
       "Patient consulting with chiropractor about auto accident injury care at Curve Chiropractic",
   },
@@ -58,7 +58,7 @@ const services = [
       "Reduces pelvic misalignment & discomfort",
       "Supports optimal fetal positioning",
     ],
-    image: "/svc-prenatal-v2.jpg",
+    image: "/svc-prenatal-v2.jpg?v=3",
     imageAlt:
       "Pregnant woman receiving gentle prenatal chiropractic care at Curve Chiropractic Tampa Bay",
   },
@@ -145,13 +145,14 @@ export default function ServicesPage() {
                 {/* Image column */}
                 <div className="w-full md:w-1/2 flex-shrink-0">
                   <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                    <Image
-                      src={svc.image}
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={`${svc.image}`}
                       alt={svc.imageAlt}
                       width={680}
                       height={480}
                       className="w-full object-cover"
-                      style={{ aspectRatio: "680/480" }}
+                      style={{ aspectRatio: "680/480", display: "block" }}
                     />
                     {/* Subtle teal corner accent */}
                     <div
