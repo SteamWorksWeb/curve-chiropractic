@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SiteFooter() {
   const year = new Date().getFullYear();
@@ -11,7 +12,7 @@ export default function SiteFooter() {
       <div className="max-w-7xl mx-auto px-6 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Brand column */}
         <div className="lg:col-span-1">
-          <a href="/" id="footer-logo" className="block mb-4">
+          <Link href="/" id="footer-logo" className="block mb-4">
             <Image
               src="/logo.png"
               alt="Curve Chiropractic"
@@ -25,7 +26,7 @@ export default function SiteFooter() {
                 opacity: 0.85,
               }}
             />
-          </a>
+          </Link>
           <p className="text-sm leading-relaxed" style={{ color: "rgba(247,243,235,0.55)" }}>
             Helping Tampa Bay patients recover from auto-injury accidents with personalized,
             insurance-covered chiropractic care.
@@ -62,6 +63,7 @@ export default function SiteFooter() {
           </h3>
           <ul className="space-y-2.5 list-none">
             {[
+              { label: "Home", href: "/" },
               { label: "Conditions", href: "/#conditions" },
               { label: "Why Choose Us", href: "/#why-us" },
               { label: "Location & Hours", href: "/#location" },
@@ -70,7 +72,7 @@ export default function SiteFooter() {
               { label: "Book Appointment", href: "/#book" },
             ].map((link) => (
               <li key={link.label}>
-                <a
+                <Link
                   href={link.href}
                   id={`footer-nav-${link.label.toLowerCase().replace(/[\s&]/g, "-")}`}
                   className="text-sm transition-colors duration-150"
@@ -79,7 +81,7 @@ export default function SiteFooter() {
                   onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(247,243,235,0.65)")}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -112,7 +114,7 @@ export default function SiteFooter() {
             </h3>
             <ul className="space-y-2 list-none">
               <li>
-                <a
+                <Link
                   href="/privacy-policy"
                   id="footer-privacy-policy"
                   className="text-sm transition-colors duration-150"
@@ -121,10 +123,10 @@ export default function SiteFooter() {
                   onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(247,243,235,0.65)")}
                 >
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/terms-of-service"
                   id="footer-terms-of-service"
                   className="text-sm transition-colors duration-150"
@@ -133,7 +135,7 @@ export default function SiteFooter() {
                   onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(247,243,235,0.65)")}
                 >
                   Terms of Service
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

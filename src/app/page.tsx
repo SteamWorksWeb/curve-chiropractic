@@ -1,6 +1,8 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import SiteNavbar from "@/components/SiteNavbar";
 
 /* ─────────────────────────────────────────────────
    SVG Icon Components
@@ -249,81 +251,6 @@ const insurers = [
   { name: "USAA",       src: "/logos/usaa.svg" },
   { name: "Travelers",  src: "/logos/travelers.svg" },
 ];
-
-/* ─────────────────────────────────────────────────
-   Navbar
-   ───────────────────────────────────────────────── */
-function Navbar() {
-  return (
-    <header
-      id="navbar"
-      className="sticky top-0 z-50 backdrop-blur-md border-b"
-      style={{
-        backgroundColor: "rgba(247, 243, 235, 0.97)",
-        borderColor: "rgba(0, 95, 97, 0.08)",
-      }}
-    >
-      <nav
-        className="max-w-7xl mx-auto px-6 flex items-center justify-between"
-        style={{ paddingTop: "18px", paddingBottom: "18px" }}
-      >
-        {/* Logo */}
-        <a href="#hero" id="nav-logo" aria-label="Curve Chiropractic home">
-          <Image
-            src="/logo.png"
-            alt="Curve Chiropractic"
-            width={160}
-            height={75}
-            className="object-contain"
-            style={{ height: "44px", width: "auto" }}
-            priority
-          />
-        </a>
-
-        {/* Nav Links */}
-        <ul className="hidden md:flex items-center gap-8 list-none">
-          {[
-            { label: "Services", href: "#services" },
-            { label: "Conditions", href: "#conditions" },
-            { label: "Why Us", href: "#why-us" },
-            { label: "Location", href: "#location" },
-            { label: "FAQ", href: "/faq" },
-            { label: "Contact", href: "/contact" },
-          ].map((item) => (
-            <li key={item.label}>
-              <a
-                href={item.href}
-                id={`nav-${item.label.toLowerCase().replace(" ", "-")}`}
-                className="text-sm font-medium transition-colors duration-200"
-                style={{ color: "#4a4a4a" }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#005F61")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#4a4a4a")}
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        {/* Phone + CTA */}
-        <div className="flex items-center gap-4">
-          <a
-            href="tel:+18139994147"
-            id="nav-phone"
-            className="hidden sm:flex items-center gap-1.5 text-sm font-medium"
-            style={{ color: "#BA5A31" }}
-          >
-            <PhoneIcon className="w-4 h-4" />
-            (813) 999-4147
-          </a>
-          <a href="#book" id="nav-book-cta" className="btn-cta-teal text-sm px-5 py-2.5">
-            Book Online
-          </a>
-        </div>
-      </nav>
-    </header>
-  );
-}
 
 
 /* ─────────────────────────────────────────────────
@@ -805,7 +732,7 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {/* Brand column */}
         <div className="lg:col-span-1">
-          <a href="#hero" id="footer-logo" className="block mb-4">
+          <Link href="/" id="footer-logo" className="block mb-4">
             <Image
               src="/logo.png"
               alt="Curve Chiropractic"
@@ -819,7 +746,7 @@ function Footer() {
                 opacity: 0.85,
               }}
             />
-          </a>
+          </Link>
           <p className="text-sm leading-relaxed" style={{ color: "rgba(247,243,235,0.55)" }}>
             Helping Tampa Bay patients recover from auto-injury accidents with personalized,
             insurance-covered chiropractic care.
@@ -834,8 +761,8 @@ function Footer() {
           <ul className="space-y-2.5 list-none">
             {["Spinal Adjustment", "Auto-Injury Rehab", "Massage Therapy", "Corrective Exercise", "Spinal Decompression"].map((s) => (
               <li key={s}>
-                <a
-                  href="#services"
+                <Link
+                  href="/#services"
                   id={`footer-svc-${s.toLowerCase().replace(/[\s-]/g, "-")}`}
                   className="text-sm transition-colors duration-150"
                   style={{ color: "rgba(247,243,235,0.65)" }}
@@ -843,7 +770,7 @@ function Footer() {
                   onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(247,243,235,0.65)")}
                 >
                   {s}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -856,15 +783,16 @@ function Footer() {
           </h3>
           <ul className="space-y-2.5 list-none">
             {[
-              { label: "Conditions", href: "#conditions" },
-              { label: "Why Choose Us", href: "#why-us" },
-              { label: "Location & Hours", href: "#location" },
+              { label: "Home", href: "/" },
+              { label: "Conditions", href: "/#conditions" },
+              { label: "Why Choose Us", href: "/#why-us" },
+              { label: "Location & Hours", href: "/#location" },
               { label: "FAQ", href: "/faq" },
               { label: "Contact", href: "/contact" },
-              { label: "Book Appointment", href: "#book" },
+              { label: "Book Appointment", href: "/#book" },
             ].map((link) => (
               <li key={link.label}>
-                <a
+                <Link
                   href={link.href}
                   id={`footer-nav-${link.label.toLowerCase().replace(/[\s&]/g, "-")}`}
                   className="text-sm transition-colors duration-150"
@@ -873,7 +801,7 @@ function Footer() {
                   onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(247,243,235,0.65)")}
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -906,7 +834,7 @@ function Footer() {
             </h3>
             <ul className="space-y-2 list-none">
               <li>
-                <a
+                <Link
                   href="/privacy-policy"
                   id="footer-privacy-policy"
                   className="text-sm transition-colors duration-150"
@@ -915,10 +843,10 @@ function Footer() {
                   onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(247,243,235,0.65)")}
                 >
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/terms-of-service"
                   id="footer-terms-of-service"
                   className="text-sm transition-colors duration-150"
@@ -927,7 +855,7 @@ function Footer() {
                   onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(247,243,235,0.65)")}
                 >
                   Terms of Service
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -958,7 +886,7 @@ function Footer() {
 export default function Home() {
   return (
     <main>
-      <Navbar />
+      <SiteNavbar />
       <Hero />
       <TrustBar />
       <Services />
