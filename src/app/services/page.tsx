@@ -16,7 +16,7 @@ const services = [
       "No twisting, cracking, or popping",
       "Immediate neurological relief for most patients",
     ],
-    image: "/svc-cervical-v2.jpg?v=3",
+    image: "/images/c2.png",
     imageAlt:
       "Chiropractor performing upper cervical adjustment on a patient at Curve Chiropractic Tampa Bay",
   },
@@ -30,7 +30,7 @@ const services = [
       "Customized mirror-image traction",
       "Progressive curve restoration protocol",
     ],
-    image: "/svc-structural-v2.jpg?v=3",
+    image: "/images/sciatica.jpg",
     imageAlt:
       "Chiropractor analyzing spinal X-rays in a modern clinic at Curve Chiropractic",
   },
@@ -44,7 +44,7 @@ const services = [
       "Whiplash & soft-tissue rehab",
       "All major auto insurers accepted",
     ],
-    image: "/svc-auto-v2.jpg?v=3",
+    image: "/images/neck.jpg",
     imageAlt:
       "Patient consulting with chiropractor about auto accident injury care at Curve Chiropractic",
   },
@@ -58,7 +58,7 @@ const services = [
       "Reduces pelvic misalignment & discomfort",
       "Supports optimal fetal positioning",
     ],
-    image: "/svc-prenatal-v2.jpg?v=3",
+    image: "/images/c1.png",
     imageAlt:
       "Pregnant woman receiving gentle prenatal chiropractic care at Curve Chiropractic Tampa Bay",
   },

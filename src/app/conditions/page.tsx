@@ -13,42 +13,42 @@ const conditions = [
     title: "Sciatica & Lower Back Pain",
     description:
       "Sharp, shooting pain down your leg or a constant dull ache in your lower back. Structural misalignment compresses the sciatic nerve — we correct the root cause, not just the symptom.",
-    image: "/svc-structural-v2.jpg",
+    image: "/images/sciatica.jpg",
   },
   {
     id: "neck-pain-whiplash",
     title: "Neck Pain & Whiplash",
     description:
       "Stiffness, limited mobility, or pain resulting from auto accidents and daily strain. Whiplash injuries are complex and require precise structural correction to heal properly.",
-    image: "/svc-auto-v2.jpg",
+    image: "/images/neck.jpg",
   },
   {
     id: "migraines-headaches",
     title: "Migraines & Headaches",
     description:
       "Chronic tension headaches and migraines often caused by upper cervical misalignment. Even a 1mm shift in the atlas can trigger debilitating, recurring head pain.",
-    image: "/svc-cervical-v2.jpg",
+    image: "/images/migranes.jpg",
   },
   {
     id: "herniated-discs",
     title: "Herniated & Bulging Discs",
     description:
       "Nerve compression causing radiating pain, numbness, and severe discomfort. We use gentle spinal decompression and structural correction to relieve disc pressure without surgery.",
-    image: "/chiro-hero.jpg",
+    image: "/images/discs.jpg",
   },
   {
     id: "numbness-tingling",
     title: "Numbness & Tingling",
     description:
       "Loss of sensation in the hands or feet, signaling interference in your nervous system. Identifying and correcting spinal subluxations restores full nerve communication.",
-    image: "/chiro-office.jpg",
+    image: "/images/numb.jpg",
   },
   {
     id: "tech-neck-posture",
     title: "Tech Neck & Posture",
     description:
       "Pain stemming from poor ergonomics, forward head posture, and prolonged screen time. For every inch your head drifts forward, your spine bears an extra 10 pounds of force.",
-    image: "/svc-prenatal-v2.jpg",
+    image: "/images/tech.jpg",
   },
 ];
 

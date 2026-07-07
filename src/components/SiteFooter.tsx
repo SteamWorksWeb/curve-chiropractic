@@ -64,6 +64,7 @@ export default function SiteFooter() {
           <ul className="space-y-2.5 list-none">
             {[
               { label: "Home", href: "/" },
+              { label: "About", href: "/about" },
               { label: "Services", href: "/services" },
               { label: "Conditions", href: "/conditions" },
               { label: "Why Choose Us", href: "/why-us" },
