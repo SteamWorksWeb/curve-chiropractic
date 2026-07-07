@@ -67,7 +67,7 @@ export default function SiteFooter() {
               { label: "Services", href: "/services" },
               { label: "Conditions", href: "/conditions" },
               { label: "Why Choose Us", href: "/why-us" },
-              { label: "Location & Hours", href: "/#location" },
+              { label: "Location & Hours", href: "/location" },
               { label: "FAQ", href: "/faq" },
               { label: "Contact", href: "/contact" },
               { label: "Book Appointment", href: "/#book" },

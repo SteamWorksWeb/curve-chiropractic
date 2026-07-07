@@ -63,7 +63,7 @@ const NAV_LINKS = [
   { label: "Services",    href: "/services" },
   { label: "Conditions",  href: "/conditions" },
   { label: "Why Us",      href: "/why-us" },
-  { label: "Location",    href: "/#location" },
+  { label: "Location",    href: "/location" },
   { label: "FAQ",         href: "/faq" },
   { label: "Contact",     href: "/contact" },
 ];
