@@ -71,7 +71,7 @@ export default function SiteFooter() {
               { label: "Location & Hours", href: "/location" },
               { label: "FAQ", href: "/faq" },
               { label: "Contact", href: "/contact" },
-              { label: "Book Appointment", href: "/#book" },
+              { label: "Schedule a Consultation", href: "/consultation" },
             ].map((link) => (
               <li key={link.label}>
                 <Link

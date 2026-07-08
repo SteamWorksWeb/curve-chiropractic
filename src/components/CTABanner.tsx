@@ -42,17 +42,17 @@ export default function CTABanner() {
           className="text-base md:text-lg leading-relaxed mb-10"
           style={{ color: "rgba(247,243,235,0.65)" }}
         >
-          Relief starts with one visit. Book your comprehensive exam today and
+          Relief starts with one visit. Schedule your comprehensive exam today and
           let&apos;s build a plan that gets you moving again.
         </p>
 
         {/* Orange CTA */}
         <Link
-          href="/contact"
+          href="/consultation"
           id="cta-banner-book"
           className="btn-cta text-base px-10 py-4 inline-block"
         >
-          Book Your Appointment
+          Schedule a Consultation
         </Link>
 
         {/* Trust micro-copy */}

@@ -17,57 +17,6 @@ export const metadata: Metadata = {
   },
 };
 
-/* ─── Credential data ───────────────────────────────────────────────────────── */
-const credentials = [
-  {
-    id: "cred-dc",
-    icon: "🎓",
-    label: "Doctor of Chiropractic",
-    detail: "Licensed in the State of Florida",
-  },
-  {
-    id: "cred-webster",
-    icon: "🏅",
-    label: "Webster Certified",
-    detail: "International Chiropractic Pediatric Association",
-  },
-  {
-    id: "cred-pi",
-    icon: "⚖️",
-    label: "Personal Injury Specialist",
-    detail: "Expert in auto-accident documentation & treatment",
-  },
-  {
-    id: "cred-xray",
-    icon: "🩻",
-    label: "Digital X-Ray Proficiency",
-    detail: "Precision imaging for structural analysis",
-  },
-];
-
-/* ─── Philosophy pillars ────────────────────────────────────────────────────── */
-const pillars = [
-  {
-    id: "pillar-listen",
-    title: "Listen First",
-    body: "Every patient gets a comprehensive consultation before anything else — because understanding your history is the first step to correcting it.",
-  },
-  {
-    id: "pillar-image",
-    title: "Measure Precisely",
-    body: "We never guess. Digital X-rays and postural analysis give us an exact picture of your spine's structural state before crafting your care plan.",
-  },
-  {
-    id: "pillar-correct",
-    title: "Correct the Root Cause",
-    body: "Adjustments here are specific, calculated, and purposeful. We aim for the source of the problem — not just where it hurts.",
-  },
-  {
-    id: "pillar-graduate",
-    title: "Graduate You",
-    body: "Our goal is a patient who no longer needs us. You receive a written roadmap with a clear graduation date from day one.",
-  },
-];
 
 /* ─── Page ──────────────────────────────────────────────────────────────────── */
 export default function AboutPage() {
@@ -205,11 +154,11 @@ export default function AboutPage() {
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <Link
-                  href="/#book"
+                  href="/consultation"
                   id="about-book-cta"
                   className="btn-cta text-sm px-8 py-3.5"
                 >
-                  Book a Consultation
+                  Schedule a Consultation
                 </Link>
                 <Link
                   href="/why-us"
@@ -224,125 +173,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── Credentials ── */}
-      <section
-        className="py-16 md:py-20"
-        style={{ backgroundColor: "#ffffff" }}
-      >
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-12">
-            <span
-              className="text-xs font-bold tracking-widest uppercase mb-3 block"
-              style={{ color: "#005F61" }}
-            >
-              Training &amp; Certifications
-            </span>
-            <h2
-              className="text-2xl md:text-3xl font-bold"
-              style={{
-                fontFamily: "var(--font-jakarta, system-ui, sans-serif)",
-                color: "#1a1a1a",
-              }}
-            >
-              Qualified to Treat What You&apos;re Dealing With
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {credentials.map((c) => (
-              <div
-                key={c.id}
-                id={c.id}
-                className="rounded-2xl p-6 text-center"
-                style={{
-                  backgroundColor: "#F7F3EB",
-                  border: "1px solid rgba(0,95,97,0.08)",
-                }}
-              >
-                <div className="text-3xl mb-3">{c.icon}</div>
-                <p
-                  className="text-sm font-bold mb-1"
-                  style={{
-                    fontFamily: "var(--font-jakarta, system-ui, sans-serif)",
-                    color: "#005F61",
-                  }}
-                >
-                  {c.label}
-                </p>
-                <p className="text-xs leading-relaxed" style={{ color: "#777" }}>
-                  {c.detail}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Philosophy pillars ── */}
-      <section
-        className="py-20 md:py-28"
-        style={{ backgroundColor: "#F7F3EB" }}
-      >
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-14">
-            <span
-              className="text-xs font-bold tracking-widest uppercase mb-3 block"
-              style={{ color: "#005F61" }}
-            >
-              The Doctor&apos;s Philosophy
-            </span>
-            <h2
-              className="text-2xl md:text-3xl font-bold"
-              style={{
-                fontFamily: "var(--font-jakarta, system-ui, sans-serif)",
-                color: "#1a1a1a",
-              }}
-            >
-              Four Principles That Guide Every Visit
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
-            {pillars.map((p, i) => (
-              <div
-                key={p.id}
-                id={p.id}
-                className="rounded-2xl p-8 flex gap-5 items-start"
-                style={{
-                  backgroundColor: "#ffffff",
-                  border: "1px solid rgba(0,95,97,0.1)",
-                  boxShadow: "0 2px 16px rgba(0,95,97,0.05)",
-                }}
-              >
-                <div
-                  className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center text-sm font-bold"
-                  style={{
-                    backgroundColor: "rgba(0,95,97,0.08)",
-                    color: "#005F61",
-                    fontFamily: "var(--font-jakarta, system-ui, sans-serif)",
-                  }}
-                >
-                  {String(i + 1).padStart(2, "0")}
-                </div>
-                <div>
-                  <h3
-                    className="text-base font-bold mb-2"
-                    style={{
-                      fontFamily: "var(--font-jakarta, system-ui, sans-serif)",
-                      color: "#1a1a1a",
-                    }}
-                  >
-                    {p.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "#666" }}>
-                    {p.body}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── Quote pull ── */}
       <section

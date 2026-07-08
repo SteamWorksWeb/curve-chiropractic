@@ -71,7 +71,7 @@ const NAV_LINKS = [
 
 const PHONE_DISPLAY = "(813) 832-3164";
 const PHONE_HREF    = "tel:+18138323164";
-const BOOK_HREF     = "/#book";
+const BOOK_HREF     = "/consultation";
 
 /* ─── Component ────────────────────────────────────────────────────────────── */
 
@@ -156,7 +156,7 @@ export default function SiteNavbar() {
               id="nav-book-cta"
               className="btn-cta-teal text-sm px-5 py-2.5"
             >
-              Book Online
+              Schedule a Consultation
             </Link>
           </div>
 
@@ -306,7 +306,7 @@ export default function SiteNavbar() {
                     (e.currentTarget.style.backgroundColor = "#BA5A31")
                   }
                 >
-                  Book Online →
+                  Schedule a Consultation →
                 </Link>
                 <p
                   className="text-center text-xs mt-3"

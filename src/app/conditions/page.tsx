@@ -229,11 +229,11 @@ export default function ConditionsPage() {
               Not sure if chiropractic care is right for your condition?
             </p>
             <Link
-              href="/contact"
+              href="/consultation"
               id="conditions-consult-cta"
               className="btn-cta text-sm px-8 py-3 inline-flex"
             >
-              Book a Free Consultation
+              Schedule a Consultation
             </Link>
           </div>
         </div>

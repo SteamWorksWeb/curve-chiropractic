@@ -209,11 +209,11 @@ export default function ServicesPage() {
 
                   {/* CTA */}
                   <Link
-                    href="/contact"
+                    href="/consultation"
                     id={`svc-cta-${svc.id}`}
                     className="btn-cta text-sm px-7 py-3 inline-flex"
                   >
-                    Book a Free Evaluation
+                    Schedule a Consultation
                   </Link>
                 </div>
               </article>

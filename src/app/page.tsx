@@ -213,9 +213,9 @@ const steps = [
     id: "book-online",
     icon: ClipboardIcon,
     number: "01",
-    title: "Book Online",
+    title: "Schedule a Consultation",
     description:
-      "Schedule in seconds from any device — no insurance paperwork required upfront. We handle it for you.",
+      "Fill out our quick intake form and our team will confirm your appointment within one business day.",
   },
   {
     id: "intake-insurance",
@@ -297,8 +297,8 @@ function Hero() {
 
           {/* CTA row */}
           <div className="flex flex-wrap items-center gap-4 pt-2">
-            <a href="#book" id="hero-book-cta" className="btn-cta">
-              Book Your Appointment
+            <a href="/consultation" id="hero-book-cta" className="btn-cta">
+              Schedule a Consultation
             </a>
             <a
               href="tel:+18138323164"
@@ -468,11 +468,11 @@ function Services() {
                 Not sure where to start?
               </h3>
               <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.8)" }}>
-                Book a free evaluation and our team will build the right treatment plan for your specific injuries.
+                Schedule a free evaluation and our team will build the right treatment plan for your specific injuries.
               </p>
             </div>
-            <a href="#book" id="services-cta-book" className="btn-cta mt-6 self-start">
-              Book Online
+            <a href="/consultation" id="services-cta-book" className="btn-cta mt-6 self-start">
+              Schedule a Consultation
             </a>
           </article>
         </div>
@@ -501,8 +501,8 @@ function Conditions() {
             We treat these familiar injuries every day and know the fastest way to get
             you stable and moving again.
           </p>
-          <a href="#book" id="conditions-book-cta" className="btn-cta mt-8 inline-flex">
-            Book an Evaluation
+          <a href="/consultation" id="conditions-book-cta" className="btn-cta mt-8 inline-flex">
+            Schedule a Consultation
           </a>
         </div>
 
@@ -673,8 +673,8 @@ function Location() {
               </div>
             </div>
 
-            <a href="#book" id="location-book-cta" className="btn-cta mt-10 self-start">
-              Book Online
+            <a href="/consultation" id="location-book-cta" className="btn-cta mt-10 self-start">
+              Schedule a Consultation
             </a>
           </div>
         </div>
@@ -793,7 +793,7 @@ function Footer() {
               { label: "Location & Hours", href: "/#location" },
               { label: "FAQ", href: "/faq" },
               { label: "Contact", href: "/contact" },
-              { label: "Book Appointment", href: "/#book" },
+              { label: "Schedule a Consultation", href: "/consultation" },
             ].map((link) => (
               <li key={link.label}>
                 <Link
