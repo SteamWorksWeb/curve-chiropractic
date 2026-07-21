@@ -279,14 +279,14 @@ function Hero() {
             className="text-5xl md:text-6xl font-bold leading-tight"
             style={{ fontFamily: "var(--font-jakarta, system-ui, sans-serif)", color: "#1a1a1a" }}
           >
-            Get back to feeling{" "}
+            Get back to feeling like{" "}
             <span
               className="italic"
               style={{ color: "#005F61" }}
             >
               yourself
             </span>{" "}
-            after an accident.
+            after and accident.
           </h1>
 
           <p className="text-lg leading-relaxed max-w-lg" style={{ color: "#555" }}>
