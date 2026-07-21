@@ -286,7 +286,7 @@ function Hero() {
             >
               yourself
             </span>{" "}
-            after and accident.
+            after an accident.
           </h1>
 
           <p className="text-lg leading-relaxed max-w-lg" style={{ color: "#555" }}>
